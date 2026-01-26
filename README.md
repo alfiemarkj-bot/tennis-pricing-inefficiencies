@@ -1,16 +1,16 @@
-Analyzing Pricing Inefficiencies in Professional Tennis Match Odds
-A Data-Driven Comparison of Model-Based and Market-Implied Probabilities
-Project Overview
+# Analyzing Pricing Inefficiencies in Professional Tennis Match Odds
+## A Data-Driven Comparison of Model-Based and Market-Implied Probabilities
+# Project Overview
 
 This project investigates how accurately bookmaker odds reflect the true probability of match outcomes in professional men’s tennis. Using historical ATP match data and publicly available betting odds, I compare bookmaker-implied probabilities with probabilities estimated from a simple data-driven model.
 
 The goal of the project is not to develop a betting system, but to apply probabilistic modeling, feature engineering, and calibration analysis to understand how well betting markets align with historical outcomes. The analysis focuses on probability calibration rather than prediction accuracy, providing insight into where markets perform strongly and where uncertainty is greatest.
 
-Research Question
+## Research Question
 
 How accurately do bookmaker odds reflect the true probability of match outcomes in professional tennis, and can historical match data identify systematic differences between market-implied and model-based probabilities?
 
-Data Sources
+## Data Sources
 Match Data
 
 Source: Jeff Sackmann’s Tennis ATP dataset
@@ -27,8 +27,8 @@ Bookmaker used: Bet365
 
 Odds format: Decimal odds for match winner and loser
 
-Methodology
-Data Preparation
+## Methodology
+# Data Preparation
 
 Match-level data was transformed into a player–opponent (long) format, where each row represents a single player’s perspective in a match.
 
@@ -44,11 +44,11 @@ Age difference
 
 Height difference
 
-Baseline Probability Model
+# Baseline Probability Model
 
 A logistic regression model was trained to estimate the probability that a player wins a match.
 
-Features used:
+# Features used:
 
 Ranking difference
 
@@ -58,7 +58,7 @@ Age difference
 
 The model was trained using a train/test split to ensure out-of-sample evaluation.
 
-Market-Implied Probabilities
+# Market-Implied Probabilities
 
 Bookmaker odds were converted to implied probabilities using:
 
@@ -66,7 +66,7 @@ p = 1 / decimal odds
 
 Both winning and losing sides of each match were included to create a balanced probability distribution.
 
-Evaluation via Calibration
+## Evaluation via Calibration
 
 Rather than focusing on accuracy or returns, model performance was evaluated using probability calibration:
 
@@ -80,7 +80,7 @@ The data-driven model
 
 Bookmaker-implied probabilities
 
-Key Results
+## Key Results
 Overall Calibration: Model vs Market
 
 Both the logistic regression model and bookmaker-implied probabilities demonstrate strong overall calibration, with observed win rates closely tracking predicted probabilities across most probability ranges.
@@ -89,7 +89,7 @@ The betting market performs particularly well at extreme probabilities (strong f
 
 The data-driven model achieves competitive calibration in mid-range probabilities despite using only publicly available historical features.
 
-Favourite vs Underdog Analysis
+# Favourite vs Underdog Analysis
 
 To examine whether calibration differs by market expectation, predicted probabilities were segmented into:
 
@@ -97,7 +97,7 @@ Favourites: predicted probability ≥ 0.5
 
 Underdogs: predicted probability < 0.5
 
-Findings
+## Findings
 
 Favourites
 
