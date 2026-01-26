@@ -28,7 +28,7 @@ Bookmaker used: Bet365
 Odds format: Decimal odds for match winner and loser
 
 ## Methodology
-# Data Preparation
+### Data Preparation
 
 Match-level data was transformed into a player–opponent (long) format, where each row represents a single player’s perspective in a match.
 
@@ -44,11 +44,11 @@ Age difference
 
 Height difference
 
-# Baseline Probability Model
+## Baseline Probability Model
 
 A logistic regression model was trained to estimate the probability that a player wins a match.
 
-# Features used:
+### Features used:
 
 Ranking difference
 
@@ -58,7 +58,7 @@ Age difference
 
 The model was trained using a train/test split to ensure out-of-sample evaluation.
 
-# Market-Implied Probabilities
+### Market-Implied Probabilities
 
 Bookmaker odds were converted to implied probabilities using:
 
@@ -89,7 +89,7 @@ The betting market performs particularly well at extreme probabilities (strong f
 
 The data-driven model achieves competitive calibration in mid-range probabilities despite using only publicly available historical features.
 
-# Favourite vs Underdog Analysis
+### Favourite vs Underdog Analysis
 
 To examine whether calibration differs by market expectation, predicted probabilities were segmented into:
 
@@ -97,25 +97,25 @@ Favourites: predicted probability ≥ 0.5
 
 Underdogs: predicted probability < 0.5
 
-## Findings
+### Findings
 
-Favourites
+#### Favourites
 
 Both the model and the market are well calibrated.
 
 The market is especially strong for heavy favourites, likely reflecting expert judgment and contextual factors not captured by the model.
 
-Underdogs
+#### Underdogs
 
 Calibration is weaker for both approaches, reflecting greater outcome volatility.
 
 The data-driven model shows slightly improved calibration in moderate underdog ranges, suggesting historical performance data may partially correct market pessimism.
 
-Interpretation
+## Interpretation
 
 The betting market is most efficient where information is most certain, while data-driven models remain competitive in more uncertain regions of the probability spectrum. This highlights both the strength of market pricing and the value of structured historical data in probabilistic analysis.
 
-Limitations
+## Limitations
 
 The model uses a limited set of features and does not account for:
 
@@ -131,7 +131,7 @@ Odds and match data were not merged at an exact match level due to identifier in
 
 The analysis does not account for bookmaker margins or market dynamics over time.
 
-Future Work
+## Future Work
 
 Potential extensions include:
 
@@ -145,11 +145,11 @@ Incorporating additional public features such as recent form or head-to-head sta
 
 Formal calibration metrics (Brier score, log loss)
 
-Ethical Note
+## Ethical Note
 
 This project is intended for educational and analytical purposes only. It does not promote gambling behaviour or provide betting advice. All conclusions are framed in terms of probability estimation and market efficiency analysis.
 
-Technologies Used
+## Technologies Used
 
 Python
 
@@ -163,6 +163,6 @@ matplotlib
 
 Jupyter Notebook
 
-Author
+## Author
 
-Alfie Johnson
+### Alfie Johnson
