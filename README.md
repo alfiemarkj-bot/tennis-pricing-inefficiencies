@@ -1,3 +1,7 @@
+![GitHub stars](https://img.shields.io/github/stars/alfiemarkj-bot/tennis-pricing-inefficiencies)
+![GitHub forks](https://img.shields.io/github/forks/alfiemarkj-bot/tennis-pricing-inefficiencies)
+
+
 # Analyzing Pricing Inefficiencies in Professional Tennis Match Odds
 ## A Data-Driven Comparison of Model-Based and Market-Implied Probabilities
 # Project Overview
